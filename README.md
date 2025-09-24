@@ -1,50 +1,55 @@
-# Welcome to your Expo app 👋
+# 📱 Expo Router Notification & Video Player App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a **React Native (Expo)** assignment that demonstrates the use of **Expo Router navigation**, **WebView integration**, **Video playback**, and **local notifications**.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+- **Tab Navigation** with Expo Router:
+  - **WebView Tab** → loads a webpage.
+  - **Video Player Tab** → plays multiple video streams with mute/unmute and stream selector.
+- **Local Notifications** using `expo-notifications`:
+  - Immediate and delayed notifications.
+  - Deep linking → tapping a notification can navigate to a specific screen.
+- **Video Player** with `expo-av`:
+  - Supports HLS and MP4 streams.
+  - Loading indicator, mute/unmute, and stream selection.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🛠 Implementation Choices
 
-In the output, you'll find options to open the app in a
+- **Expo Router** for file-based navigation.
+- **expo-notifications** for handling local notifications and deep-link navigation.
+- **react-native-webview** for embedding external web content.
+- **expo-av** for reliable video playback.
+- **React Hooks** (`useState`, `useEffect`) for state management.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📖 How It Works
 
-## Get a fresh project
+1. The app starts with two tabs: **WebView** and **Video Player**.
+2. **WebView Screen**:
+   - Loads an external site.
+   - Sends a notification when the page finishes loading.
+   - Includes buttons to trigger immediate or delayed notifications.
+3. **Notification Handling**:
+   - If a notification has a `url`, the app navigates to that screen automatically.
+4. **Video Player Screen**:
+   - Plays a default video stream.
+   - Allows switching between multiple streams.
+   - Includes mute/unmute functionality and a loading indicator.
 
-When you're ready, run:
+---
+
+## ▶️ Running the Project
 
 ```bash
-npm run reset-project
+# Install dependencies
+npm install
+
+# Start the project
+npx expo start
 ```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
