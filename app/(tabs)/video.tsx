@@ -34,7 +34,7 @@ const HLSVideoPlayer = () => {
   const [isMuted, setIsMuted] = useState(false);
   const [selectedStream, setSelectedStream] = useState(streams[0].uri);
 
-  const onStreamChange = (uri) => {
+  const onStreamChange = (uri: string) => {
     setSelectedStream(uri);
     setLoading(true);
   };

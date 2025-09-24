@@ -9,16 +9,16 @@ export default function RootLayout() {
     const subscription = Notifications.addNotificationResponseReceivedListener(
       (response) => {
         const url = response.notification.request.content.data.url;
-        if (url) {
-          router.replace(url);
+        if (typeof url === "string") {
+          router.replace(url as any);
         }
       }
     );
 
     Notifications.getLastNotificationResponseAsync().then((response) => {
       const url = response?.notification.request.content.data.url;
-      if (url) {
-        router.replace(url);
+      if (typeof url === "string") {
+        router.replace(url as any);
       }
     });
 
